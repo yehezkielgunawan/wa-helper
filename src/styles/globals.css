@@ -60,7 +60,7 @@
   }
 
   body {
-    @apply font-primary text-sm md:text-base;
+    @apply font-primary text-sm dark:bg-dark md:text-base;
   }
 
   .layout-container {
