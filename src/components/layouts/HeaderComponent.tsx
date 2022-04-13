@@ -1,18 +1,23 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
-import React from "react";
-import { BiMoon, BiSun } from "react-icons/bi";
+import React, { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 import clsxm from "@/lib/helpers/clsxm";
 
 import Button from "../buttons/Button";
 
 const HeaderComponent = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState<boolean>(false);
 
   const handleChangeTheme = () => {
-    return setTheme(resolvedTheme === "light" ? "dark" : "light");
+    return setTheme(theme === "light" ? "dark" : "light");
   };
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <header className="fixed top-0 z-50 w-full bg-white p-0.5 opacity-90 dark:bg-gray-700">
@@ -35,11 +40,7 @@ const HeaderComponent = () => {
           )}
           onClick={() => handleChangeTheme()}
         >
-          {resolvedTheme === "light" ? (
-            <BiMoon size={20} />
-          ) : (
-            <BiSun size={20} />
-          )}
+          {theme === "dark" ? <FaSun size={20} /> : <FaMoon size={20} />}
         </Button>
       </div>
     </header>
