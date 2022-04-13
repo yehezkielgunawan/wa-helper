@@ -1,23 +1,22 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  defaultTitle: "yehez-nexttw-starter",
-  description:
-    "Yehezkiel Gunawan's personalized Next.js + Tailwind CSS + TypeScript starter template",
-  canonical: "https://yehez-nexttailwind-starter.yehezgun.com",
+  defaultTitle: "WA Helper",
+  description: "Send Whastapp message without saving the contact first.",
+  canonical: "https://wa.yehezgun.com",
   openGraph: {
-    url: "https://yehez-nexttailwind-starter.yehezgun.com",
-    title: "yehez-nexttailwind-starter",
-    description: "Next.js + Tailwind CSS + TypeScript template",
+    url: "https://wa.yehezgun.com",
+    title: "WA Helper",
+    description: "Send Whastapp message without saving the contact first.",
     type: "website",
     images: [
       {
-        url: "https://og.yehezgun.com/api/base?description=A%20personalized%20Next.js%20%2B%20TS%20%2B%20Tailwind%20CSS%20starter%20template%20by%20Yehezkiel%20Gunawan&siteName=nexttw-starter.yehezgun.com&templateTitle=Next.js%20%2B%20TS%20%2BTailwind%20Starter%20Template&theme=dark",
-        alt: "yehez-nexttailwind-starter.yehezgun.com og-image",
+        url: "https://og.yehezgun.com/api/base?description=Send%20Whastapp%20message%20without%20saving%20the%20contact%20first.&logo=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F733%2F733585.png&siteName=wa.yehezgun.com&templateTitle=Whatsapp%20Helper&theme=dark",
+        alt: "wa.yehezgun.com og-image",
         width: 800,
         height: 600,
       },
     ],
-    site_name: "yehez-nexttailwind-starter",
+    site_name: "wa.yehezgun.com",
   },
   twitter: {
     handle: "@handle",
@@ -27,7 +26,7 @@ const defaultSEOConfig = {
   additionalLinkTags: [
     {
       rel: "icon",
-      href: "https://assets.vercel.com/image/upload/v1607554385/repositories/next-js/next-logo.png",
+      href: "https://cdn-icons-png.flaticon.com/512/733/733585.png",
     },
   ],
 };
