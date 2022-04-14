@@ -82,4 +82,16 @@
     background-size: 100% 3px;
     background-position: 0 100%;
   }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .base-form {
+    @apply rounded dark:bg-slate-600 dark:text-zinc-100;
+    @apply dark:focus:border-sky-300 dark:focus:ring-sky-300;
+  }
 }
