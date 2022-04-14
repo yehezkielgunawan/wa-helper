@@ -34,14 +34,14 @@ const HeaderComponent = () => {
             WhatsApp Helper
           </h5>
         </div>
-        <div className="inline-flex items-center gap-3">
+        <div className="inline-flex items-center gap-1 md:gap-3">
           <ButtonLink
             variant="ghost"
             href="https://github.com/yehezkielgunawan/wa-helper"
             className="gap-2"
           >
-            <FaGithub size={16} />
-            Github Repo
+            <FaGithub size={28} />
+            <span className="hidden sm:block">Github Repo</span>
           </ButtonLink>
           <Button
             variant="outline"

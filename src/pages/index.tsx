@@ -72,7 +72,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
             phone number.
           </h4>
           <div className="space-y-0.5">
-            <p className="text-base font-semibold underline">
+            <p className="text-sm font-semibold underline">
               This site does not collect any personal information.
             </p>
             <p className="text-xs">
@@ -80,7 +80,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
             </p>
           </div>
         </section>
-        <section className="my-4 mx-auto max-w-lg space-y-2 px-4 md:px-0">
+        <section className="my-10 mx-auto max-w-lg space-y-2 px-4 md:px-0">
           <div className="space-y-2">
             <label
               htmlFor="phoneNum"
