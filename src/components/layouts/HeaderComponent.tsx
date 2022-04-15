@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
-import { FaGithub, FaMoon, FaSun, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 import clsxm from "@/lib/helpers/clsxm";
 
@@ -24,7 +25,7 @@ const HeaderComponent = () => {
     <header className="fixed top-0 z-50 w-full bg-white p-0.5 opacity-90 dark:bg-gray-700">
       <div
         className={clsx(
-          "layout flex items-center justify-between",
+          "flex items-center justify-between",
           "mx-auto h-14 max-w-4xl px-2 md:px-1"
         )}
       >
@@ -53,7 +54,7 @@ const HeaderComponent = () => {
             )}
             onClick={() => handleChangeTheme()}
           >
-            {theme === "dark" ? <FaSun size={20} /> : <FaMoon size={20} />}
+            {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
           </Button>
         </div>
       </div>
