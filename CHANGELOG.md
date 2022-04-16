@@ -2,30 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.0.3](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/compare/v0.0.2...v0.0.3) (2022-03-31)
-
-### Bug Fixes
-
-- **Button, Form, and Link Components:** :rotating_light: fix codes based on linter rules ([8e53666](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/8e53666ffbd7d95474e000e91cb32f03fb7af24c))
-
-### [0.0.2](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/compare/v0.0.1...v0.0.2) (2022-02-06)
+## 1.0.0 (2022-04-16)
 
 ### Features
 
-- **package.json:** :heavy_plus_sign: add stantard-version to generate changelog ([6f66485](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/6f664856e9f391f832270340cc77f57654a67aaa))
-
-### 0.0.1 (2022-02-06)
-
-### Features
-
-- **all files:** :sparkles: initialization base config ([70ca15b](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/70ca15b4b062aa2aa7ef031079e7b836cb991ee5))
-- **clsxm:** :sparkles: initiate tailwind merge function helper ([bcd0ce6](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/bcd0ce668312a118faed26aab022f1f22e16a622))
-- **components and RegularLink:** :sparkles: initiate regular link (still messy) ([9c3a1ea](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/9c3a1ea7efcd97acbbb41c64606f6d324e7397d8))
-- **FooterComponent.tsx:** :sparkles: add footer ([e9e5719](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/e9e5719d4c49e57477e9bb3fed6425a342f78738))
-- **NextImage.tsx:** :sparkles: initiate NextImage component ([aa3b811](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/aa3b811555b99a0c00c82b29644c2876c41c5bf7))
-- **tailwind.config.js, HeaderComponent, \_app.tsx, globals.css:** :sparkles: add base dark mode ([6722b24](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/6722b24dd0f727a13779cbbe902d1ca5f351d62d))
-- **Unstyled Input, Select, and Textarea:** :sparkles: make unstyled input, select, and textarea ([4de168e](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/4de168e297d29af2caa43e6d3bb4e60916477b7e))
-
-### Bug Fixes
-
-- **component.tsx:** :adhesive_bandage: add go back button nav ([a82a7ed](https://github.com/yehezkielgunawan/yehez-nexttailwind-starter/commit/a82a7ed8a0e00355585986f8c138579073be52c0))
+- **baseConfig.ts:** :sparkles: add constant file to put the baseURL and API Key ([0e07860](https://github.com/yehezkielgunawan/wa-helper/commit/0e07860a8f31b291d75bdcf7c57274513ee454b2))
+- **fetcher.ts and main page:** :sparkles: add shortener link for copy link feature ([b815f94](https://github.com/yehezkielgunawan/wa-helper/commit/b815f94fe72db0af43dd84b6d40f36fe1ecf028d))
+- first initialization ([573a577](https://github.com/yehezkielgunawan/wa-helper/commit/573a577237f3b7d154c354f3c2b3311f66f0fd74))
+- **headerComponent:** :sparkles: add github repo link ([5bc9b25](https://github.com/yehezkielgunawan/wa-helper/commit/5bc9b25ca694f6c425d2944b2d81ae52fe86e124))
+- **Home page:** :sparkles: initialization base UI and fetch API ([9a0fc5e](https://github.com/yehezkielgunawan/wa-helper/commit/9a0fc5e51c1d6160c75562de16273e7bcf0ac15f))
+- **main page:** :sparkles: finished whatsapp helper functionallity ([1a9d59a](https://github.com/yehezkielgunawan/wa-helper/commit/1a9d59a1754c8a969bbcd3c45738737d99644055))
