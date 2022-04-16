@@ -1,9 +1,16 @@
+import { AxiosError } from "axios";
 import React, { useState } from "react";
 import { FaCheck, FaCopy } from "react-icons/fa";
 
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
-import { CountryCodeProps, getCountryCodes } from "@/lib/fetcher/fetcher";
+import {
+  CountryCodeProps,
+  getCountryCodes,
+  LinkContent,
+  LinkResponse,
+  shortenedURL,
+} from "@/lib/fetcher/fetcher";
 import clsxm from "@/lib/helpers/clsxm";
 
 export async function getStaticProps() {
@@ -36,18 +43,21 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
     return setMessage(encodeURIComponent(e.target.value));
   };
 
-  const handleCopiedLink = () => {
+  const handleCopiedLink = async () => {
+    await shortenedURL(
+      `https://api.whatsapp.com/send?phone=${countryCode + waNum}${
+        message.length > 0 ? "&text=" + message : ""
+      }`,
+      "tinyurl.com"
+    )
+      .then((res: LinkContent) => {
+        setCopiedLink(res.tiny_url);
+        navigator.clipboard.writeText(res.tiny_url);
+      })
+      .catch((err: AxiosError<LinkResponse>) => {
+        alert(err.response?.data.errors?.map((errorMessage) => errorMessage));
+      });
     setIsCopied(true);
-    setCopiedLink(
-      `https://api.whatsapp.com/send?phone=${countryCode + waNum}${
-        message.length > 0 ? "&text=" + message : ""
-      }`
-    );
-    navigator.clipboard.writeText(
-      `https://api.whatsapp.com/send?phone=${countryCode + waNum}${
-        message.length > 0 ? "&text=" + message : ""
-      }`
-    );
     setTimeout(() => {
       setIsCopied(false);
     }, 5000);
