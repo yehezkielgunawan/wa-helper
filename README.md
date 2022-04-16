@@ -8,7 +8,7 @@ Actually, I made it for myself. But of course I'm open to any feedbacks. You can
 
 ## What I'm use here?
 
-- [Next.js]https://nextjs.org/) as the main tech stack and code base.
+- [Next.js](https://nextjs.org/) as the main tech stack and code base.
 - [Tailwind CSS](https://tailwindcss.com/) as the CSS utility class tool.
 
 ## How to use it?

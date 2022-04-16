@@ -11,7 +11,7 @@ const defaultSEOConfig = {
     images: [
       {
         url: "https://og.yehezgun.com/api/base?description=Send%20Whastapp%20message%20without%20saving%20the%20contact%20first.&logo=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F408%2F408708.png%3Fw%3D740&siteName=wa.yehezgun.com&templateTitle=WhatsApp%20Helper&theme=dark",
-        alt: "wa.yehezgun.com og-image",
+        alt: "wa.yehezgun.com whatsapp-helper",
         width: 800,
         height: 600,
       },
