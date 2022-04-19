@@ -72,7 +72,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
             message.length > 0 ? "?text=" + message : ""
           }`
         : `https://web.whatsapp.com/send?phone=${countryCode + waNum}${
-            message.length > 0 ? "?text=" + message : ""
+            message.length > 0 ? "&text=" + message : ""
           }`,
       "_blank"
     );
