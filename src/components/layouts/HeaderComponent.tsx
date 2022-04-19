@@ -40,7 +40,7 @@ const HeaderComponent = () => {
             variant="ghost"
             href="https://github.com/yehezkielgunawan/wa-helper"
             className={clsxm(
-              "gap-2 text-lightgray-800 dark:text-lightgray-500",
+              "gap-2 text-lightgray-900 dark:text-lightgray-400",
               "hover:bg-daviesgrey-100 dark:hover:bg-daviesgrey-400"
             )}
           >
