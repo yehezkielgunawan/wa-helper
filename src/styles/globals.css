@@ -35,7 +35,7 @@
   }
 
   body {
-    @apply font-primary text-sm dark:bg-dark md:text-base;
+    @apply bg-lightgray-100 font-primary text-sm dark:bg-daviesgrey-700 md:text-base;
   }
 
   .layout-container {
@@ -61,6 +61,7 @@
 @layer utilities {
   .base-form {
     @apply rounded dark:bg-slate-600 dark:text-zinc-100;
+    @apply focus:border-pastelgreen-600 focus:ring-pastelgreen-600;
     @apply dark:focus:border-pastelgreen-300 dark:focus:ring-pastelgreen-300;
   }
 }
