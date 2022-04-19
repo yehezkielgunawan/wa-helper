@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/yehezkielgunawan/wa-helper/compare/v1.0.1...v1.1.0) (2022-04-19)
+
+### Features
+
+- **main page:** :sparkles: add device checking logic ([02a7913](https://github.com/yehezkielgunawan/wa-helper/commit/02a7913b7f4c4fd0913da4c261cf5d382f31ba33))
+
+### Bug Fixes
+
+- **global.css:** :lipstick: fix focus color for forms ([63ac80b](https://github.com/yehezkielgunawan/wa-helper/commit/63ac80b15925003a4a042055f1f2beb2606ed8bc))
+
 ### [1.0.1](https://github.com/yehezkielgunawan/wa-helper/compare/v1.0.0...v1.0.1) (2022-04-19)
 
 ## 1.0.0 (2022-04-16)
