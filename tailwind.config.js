@@ -11,7 +11,6 @@ module.exports = {
       },
       colors: {
         primary: {
-          // Customize it on globals.css :root
           50: "#EEF7F1",
           100: "#D9EDDF",
           200: "#B7DCC3",

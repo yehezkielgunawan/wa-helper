@@ -1,5 +1,6 @@
 import { AxiosError } from "axios";
 import React, { useState } from "react";
+import { isMobile } from "react-device-detect";
 import { FaCheck, FaCopy } from "react-icons/fa";
 
 import Button from "@/components/buttons/Button";
@@ -47,8 +48,8 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
     setCopiedLink("");
     setIsCopied(true);
     await shortenedURL(
-      `https://api.whatsapp.com/send?phone=${countryCode + waNum}${
-        message.length > 0 ? "&text=" + message : ""
+      `https://wa.me/${countryCode + waNum}${
+        message.length > 0 ? "?text=" + message : ""
       }`,
       "tinyurl.com"
     )
@@ -66,9 +67,13 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 
   const openWAAPI = () => {
     return window.open(
-      `https://api.whatsapp.com/send?phone=${countryCode + waNum}${
-        message.length > 0 ? "&text=" + message : ""
-      }`,
+      isMobile
+        ? `https://wa.me/${countryCode + waNum}${
+            message.length > 0 ? "?text=" + message : ""
+          }`
+        : `https://web.whatsapp.com/send?phone=${countryCode + waNum}${
+            message.length > 0 ? "?text=" + message : ""
+          }`,
       "_blank"
     );
   };
@@ -121,7 +126,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
                 type="number"
                 name="phoneNum"
                 id="phoneNum"
-                placeholder="example: 85285569094"
+                placeholder="Example: 85285569094"
                 className={clsxm("base-form w-full")}
                 onChange={handleWANum}
               />
