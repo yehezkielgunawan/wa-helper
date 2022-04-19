@@ -44,6 +44,8 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
   };
 
   const handleCopiedLink = async () => {
+    setCopiedLink("");
+    setIsCopied(true);
     await shortenedURL(
       `https://api.whatsapp.com/send?phone=${countryCode + waNum}${
         message.length > 0 ? "&text=" + message : ""
@@ -57,7 +59,6 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
       .catch((err: AxiosError<LinkResponse>) => {
         alert(err.response?.data.errors?.map((errorMessage) => errorMessage));
       });
-    setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
     }, 5000);
@@ -151,6 +152,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
               variant="outline"
               className="grow gap-2"
               onClick={() => handleCopiedLink()}
+              isLoading={copiedLink.length < 1 && isCopied ? true : false}
             >
               <FaCopy size="16" /> Copy Link
             </Button>
@@ -160,7 +162,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
           className={clsxm(
             "invisible my-4 mx-auto max-w-lg rounded p-3",
             "bg-teal-200 dark:bg-teal-500",
-            isCopied && "visible"
+            isCopied && copiedLink.length > 1 && "visible"
           )}
         >
           <div className="inline-flex w-full items-center justify-between gap-2">
