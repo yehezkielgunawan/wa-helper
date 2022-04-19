@@ -41,8 +41,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           "transition duration-200 ease-in",
           [
             variant === "primary" && [
-              "bg-primary-500 text-white",
-              "hover:bg-primary-600 hover:text-white",
+              "bg-primary-600 text-white",
+              "hover:bg-primary-400 hover:text-white",
               "active:bg-primary-500",
               "disabled:bg-primary-200",
             ],
@@ -50,7 +50,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               "text-primary-500 dark:text-primary-300",
               "border border-primary-600",
               "hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100",
-              "dark:hover:bg-primary-500",
+              "dark:hover:bg-primary-600",
             ],
             variant === "ghost" && [
               "text-primary-500",
