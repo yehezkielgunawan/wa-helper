@@ -141,10 +141,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
           </div>
           <div className="flex justify-between gap-2">
             <Button
-              className={clsxm(
-                "grow justify-center",
-                "disabled:hover:cursor-not-allowed"
-              )}
+              className={clsxm("grow justify-center")}
               disabled={waNum.length < 10}
               onClick={() => openWAAPI()}
             >

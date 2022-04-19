@@ -39,7 +39,10 @@ const HeaderComponent = () => {
           <ButtonLink
             variant="ghost"
             href="https://github.com/yehezkielgunawan/wa-helper"
-            className="gap-2"
+            className={clsxm(
+              "gap-2 text-lightgray-800 dark:text-lightgray-500",
+              "hover:bg-daviesgrey-100 dark:hover:bg-daviesgrey-400"
+            )}
           >
             <FaGithub size={28} />
             <span className="hidden sm:block">Github Repo</span>
@@ -47,9 +50,9 @@ const HeaderComponent = () => {
           <Button
             variant="outline"
             className={clsxm(
-              "dark:border-white dark:text-white dark:hover:bg-gray-500",
-              "hover:border-black hover:bg-gray-200",
-              "border-black p-2 text-black",
+              "dark:border-white dark:text-white dark:hover:bg-daviesgrey-400",
+              "hover:border-daviesgrey-400 hover:bg-daviesgrey-200",
+              "border-daviesgrey-700 p-2 text-black",
               "rounded-full"
             )}
             onClick={() => handleChangeTheme()}
