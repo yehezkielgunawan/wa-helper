@@ -158,6 +158,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
               className="grow gap-2"
               onClick={() => handleCopiedLink()}
               isLoading={copiedLink.length < 1 && isCopied ? true : false}
+              disabled={waNum.length < 10}
             >
               <FaCopy size="16" /> Copy Link
             </Button>
