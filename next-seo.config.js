@@ -28,6 +28,10 @@ const defaultSEOConfig = {
       rel: "icon",
       href: "https://cdn-icons-png.flaticon.com/512/408/408708.png?w=740",
     },
+    {
+      rel: "manifest",
+      href: "/manifest.json",
+    },
   ],
 };
 
