@@ -1,5 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
+import { BASE_URL, API_KEY } from "@/constants/baseConfig";
+
 export type CountryCodeProps = {
   name: string;
   dial_code: string;
@@ -32,28 +34,26 @@ export const getCountryCodes = async () => {
 };
 
 export const shortenedURL = async (url: string, domain: string) => {
-  // return await axios
-  //   .post<LinkInput, AxiosResponse<LinkResponse>>(
-  //     `${BASE_URL}create`,
-  //     {
-  //       url,
-  //       domain,
-  //     },
-  //     {
-  //       headers: {
-  //         Authorization: "Bearer " + API_KEY,
-  //       },
-  //     }
-  //   )
-  //   .then((res: AxiosResponse<LinkResponse>) => {
-  //     return res.data.data;
-  //   });
   return await axios
-    .post<LinkInput, AxiosResponse<LinkResponse>>(`/api/shorten`, {
-      url,
-      domain,
-    })
-    .then((res) => {
+    .post<LinkInput, AxiosResponse<LinkResponse>>(
+      `${BASE_URL}create`,
+      {
+        url,
+        domain,
+      },
+      {
+        headers: {
+          Authorization: "Bearer " + API_KEY,
+        },
+      }
+    )
+    .then((res: AxiosResponse<LinkResponse>) => {
       return res.data.data;
     });
+  // return await axios
+  //   .post<LinkInput, AxiosResponse<LinkResponse>>(`/api/shorten`, {
+  //     url,
+  //     domain,
+  //   })
+  //   .then((res) => res.data.data);
 };

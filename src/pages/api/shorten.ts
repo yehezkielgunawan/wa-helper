@@ -6,7 +6,7 @@ import { LinkInput, LinkResponse } from "@/lib/fetcher/fetcher";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<AxiosResponse<LinkResponse>>
 ) {
   const url = req.body.url;
   const domain = req.body.domain;
@@ -25,7 +25,7 @@ export default async function handler(
       }
     )
     .then((res: AxiosResponse<LinkResponse>) => {
-      return res.data.data;
+      return res;
     });
 
   res.status(201).json(tempRes);
