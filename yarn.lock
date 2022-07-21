@@ -3668,10 +3668,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwind-merge@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.4.0.tgz#094dca0f691ac47c7123121c6d3d42e8c0df0aa7"
-  integrity sha512-SuI3jDWwvBEPP55PkP3zSGbQ7w+A9RN5wsb4hJeDV+oS8UDghhWOt1shviI1lGuDTRuos7fxD5mCo6Uu4A/tjg==
+tailwind-merge@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.5.0.tgz#0ce21a0ef229bc7671995ed1ec84990bee37b3fa"
+  integrity sha512-bh+3+rbGTqlxSbwBqowoQ/SOymUL+V5EDxABLmA49WvacryJDwmO8F0H0vflyE7pGf6xh344VdK11WRIjlLvUw==
 
 tailwindcss@^3.1.4:
   version "3.1.4"
