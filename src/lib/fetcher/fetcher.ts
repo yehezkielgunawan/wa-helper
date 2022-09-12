@@ -3,9 +3,9 @@ import axios, { AxiosResponse } from "axios";
 import { BASE_URL, API_KEY } from "@/constants/baseConfig";
 
 export type CountryCodeProps = {
-  name: string;
-  dial_code: string;
-  code: string;
+  E164: string;
+  phone_code: string;
+  country_name: string;
 };
 
 export type LinkResponse = {
@@ -29,7 +29,7 @@ export type LinkInput = {
 
 export const getCountryCodes = async () => {
   return await axios
-    .get("https://jsonkeeper.com/b/9NM9")
+    .get("https://countrycode.dev/api/calls")
     .then((res: AxiosResponse<Array<CountryCodeProps>>) => res.data);
 };
 
@@ -50,10 +50,4 @@ export const shortenedURL = async (url: string, domain: string) => {
     .then((res: AxiosResponse<LinkResponse>) => {
       return res.data.data;
     });
-  // return await axios
-  //   .post<LinkInput, AxiosResponse<LinkResponse>>(`/api/shorten`, {
-  //     url,
-  //     domain,
-  //   })
-  //   .then((res) => res.data.data);
 };
