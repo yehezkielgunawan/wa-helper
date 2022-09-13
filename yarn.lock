@@ -203,10 +203,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/catamaran@^4.5.7":
-  version "4.5.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/catamaran/-/catamaran-4.5.7.tgz#bc749d0b2b8e9f55eab33f96ec42d6f051967476"
-  integrity sha512-1t24Uxj86jl8vEljxkk2xonwDTYyaPKFuO0ibypFIR9i3v7H2xVwZt01087P6I/JIdshZrMrCq7e/nvzsNYGsQ==
+"@fontsource/catamaran@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/catamaran/-/catamaran-4.5.8.tgz#8ce7d47f8d4eb4bf0b768357eb25e29a49cd18b6"
+  integrity sha512-LH2SPZQRUghF6+8BlQK+xaueq4A7aH8R2X6Iw2rQueTp0FU6Oh0d1vgOmr0GhPEjlptZ/W9C3W9KvXEmWRSGdA==
 
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
