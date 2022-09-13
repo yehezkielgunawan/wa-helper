@@ -115,7 +115,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
                 onChange={handleCountryCode}
               />
               <datalist id="countryCode">
-                {countryCodeList.map((code, index) => (
+                {countryCodeList.map((code) => (
                   <option
                     value={code.phone_code}
                     key={code.phone_code}
