@@ -110,7 +110,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
                 list="countryCode"
                 name="code"
                 id="code"
-                defaultValue="+62"
+                defaultValue="62"
                 className={clsxm("base-form w-20")}
                 onChange={handleCountryCode}
               />
