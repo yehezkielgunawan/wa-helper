@@ -114,14 +114,16 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
                 className={clsxm("base-form w-20")}
                 onChange={handleCountryCode}
               />
+
               <datalist id="countryCode">
                 {countryCodeList.map((code) => (
                   <option
                     value={code.phone_code}
-                    key={code.phone_code}
+                    key={`${code.phone_code}-${code.country_name}-${code.E164}`}
                   >{`${code.phone_code} ${code.country_name}`}</option>
                 ))}
               </datalist>
+
               <input
                 type="number"
                 name="phoneNum"

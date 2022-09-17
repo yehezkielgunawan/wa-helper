@@ -1,7 +1,5 @@
 import axios, { AxiosResponse } from "axios";
 
-import { BASE_URL, API_KEY } from "@/constants/baseConfig";
-
 export type CountryCodeProps = {
   E164: string;
   phone_code: string;
@@ -28,9 +26,12 @@ export type LinkInput = {
 };
 
 export const getCountryCodes = async () => {
-  return await axios
+  return axios
     .get("https://countrycode.dev/api/calls")
-    .then((res: AxiosResponse<Array<CountryCodeProps>>) => res.data);
+    .then((res: AxiosResponse<Array<CountryCodeProps>>) => {
+      // Afghanistan is duplicated in that API (index 0 and 1), so we just take the array from index one to the latest.
+      return res.data.slice(1);
+    });
 };
 
 export const shortenedURL = async (url: string, domain: string) => {
