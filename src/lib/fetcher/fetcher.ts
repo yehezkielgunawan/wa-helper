@@ -34,20 +34,13 @@ export const getCountryCodes = async () => {
     });
 };
 
+// Will send the request to the Next.js's API route.
 export const shortenedURL = async (url: string, domain: string) => {
   return await axios
-    .post<LinkInput, AxiosResponse<LinkResponse>>(
-      `${BASE_URL}create`,
-      {
-        url,
-        domain,
-      },
-      {
-        headers: {
-          Authorization: "Bearer " + API_KEY,
-        },
-      }
-    )
+    .post<LinkInput, AxiosResponse<LinkResponse>>("/api/shorten", {
+      url,
+      domain,
+    })
     .then((res: AxiosResponse<LinkResponse>) => {
       return res.data.data;
     });
