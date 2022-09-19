@@ -28,6 +28,8 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.7",
@@ -35,6 +37,8 @@
     "eslint-config-next": "^12.3.0",
     "eslint-config-yehezgun": "^1.2.5",
     "husky": "^7.0.0",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
     "lint-staged": "^12.5.0",
     "postcss": "^8.4.16",
     "prettier-plugin-tailwindcss": "^0.1.11",
