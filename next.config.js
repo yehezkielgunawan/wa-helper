@@ -3,6 +3,6 @@ module.exports = {
   serverRuntimeConfig: {
     API_KEY: process.env.TINYURL_API_KEY,
   },
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
 };
