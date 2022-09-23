@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: false,
+  serverRuntimeConfig: {
+    API_KEY: process.env.TINYURL_API_KEY,
+  },
+  reactStrictMode: true,
   swcMinify: true,
 };

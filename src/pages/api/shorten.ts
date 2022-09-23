@@ -1,7 +1,10 @@
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { BASE_URL, API_KEY } from "@/constants/baseConfig";
+// We can no longer use the environment variables in `constants`, as the
+// environment variables are now on the server, not the browser.
+const API_KEY = process.env.TINYURL_API_KEY;
+const BASE_URL = "https://api.tinyurl.com/";
 
 type LinkFailureResponse = {
   message: string;
