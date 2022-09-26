@@ -10,7 +10,10 @@
     "prepare": "husky install",
     "release": "standard-version",
     "test": "jest --watch",
-    "test:ci": "jest --ci --collect-coverage --verbose"
+    "test:ci": "jest --ci --collect-coverage --verbose",
+    "format": "prettier --write src",
+    "format:ci": "prettier --check src",
+    "typescript:ci": "tsc --noEmit"
   },
   "dependencies": {
     "@fontsource/catamaran": "^4.5.7",
