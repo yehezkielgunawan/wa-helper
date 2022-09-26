@@ -11,7 +11,8 @@
     "release": "standard-version",
     "test": "jest --watch",
     "test:ci": "jest --ci --collect-coverage --verbose",
-    "format": "prettier --write src"
+    "format": "prettier --write src",
+    "format:ci": "prettier --check src"
   },
   "dependencies": {
     "@fontsource/catamaran": "^4.5.7",
