@@ -19,7 +19,7 @@ jobs:
           cache: "yarn"
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: yarn --immutable
 
       - name: Run Prettier
         run: yarn format:ci
