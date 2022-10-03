@@ -44,11 +44,10 @@
   }
 
   .link-underline {
-    color: inherit;
     @apply underline decoration-dotted underline-offset-2;
-    @apply transition-colors duration-700;
-    @apply hover:decoration-pastelgreen-500 hover:decoration-solid hover:underline-offset-4;
-    @apply dark:hover:decoration-pastelgreen-300;
+    @apply rounded-lg p-1;
+    @apply hover:bg-pastelgreen-300 hover:no-underline dark:hover:bg-hookersgreen-500;
+    @apply transition duration-300 ease-out;
   }
 
   input[type="number"]::-webkit-inner-spin-button,
