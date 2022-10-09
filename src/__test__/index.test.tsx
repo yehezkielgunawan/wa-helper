@@ -1,6 +1,7 @@
 // __tests__/index.test.jsx
 
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import "@testing-library/jest-dom";
 import Home from "@/pages/index";
@@ -28,19 +29,17 @@ describe("Generate WA Link", () => {
       "Example: 85285569094"
     ) as HTMLInputElement;
     const generateButton = screen.getByText("Generate");
-    await waitFor(() => {
-      fireEvent.change(phoneNumber, { target: { value: "812342" } });
-    });
+    await userEvent.type(phoneNumber, "812432");
     expect(generateButton).toBeDisabled();
   });
 
   it("The button can be clicked if the phone number is valid", async () => {
     render(<Home countryCodes={[]} />);
     const phoneNumber = screen.getByAltText("phoneNum") as HTMLInputElement;
-    const generateButton = screen.getByText("Generate");
-    await waitFor(() => {
-      fireEvent.change(phoneNumber, { target: { value: "85285569293" } });
-    });
+    const generateButton = screen.getByRole(
+      "generateButton"
+    ) as HTMLButtonElement;
+    await userEvent.type(phoneNumber, "85285569293");
     expect(generateButton).toBeEnabled();
   });
 });

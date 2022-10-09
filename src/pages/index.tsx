@@ -162,6 +162,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
               className={clsxm("grow justify-center")}
               disabled={waNum.length < 10}
               onClick={() => openWAAPI()}
+              role="generateButton"
             >
               Generate
             </Button>
