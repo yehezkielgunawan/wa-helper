@@ -135,6 +135,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
                 type="number"
                 name="phoneNum"
                 id="phoneNum"
+                alt="phoneNum"
                 placeholder="Example: 85285569094"
                 className={clsxm("base-form w-full")}
                 onChange={handleWANum}
@@ -161,6 +162,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
               className={clsxm("grow justify-center")}
               disabled={waNum.length < 10}
               onClick={() => openWAAPI()}
+              role="generateButton"
             >
               Generate
             </Button>
