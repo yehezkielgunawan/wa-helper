@@ -37,3 +37,28 @@ test("The button can be clicked if the phone number is valid", async () => {
   await userEvent.type(phoneNumber, "85285569293");
   expect(generateButton).toBeEnabled();
 });
+
+test("The copy button disabled if the phone number is invalid", async () => {
+  render(<Home countryCodes={[]} />);
+  const phoneNumber = screen.getByAltText("phoneNum") as HTMLInputElement;
+  const copyLinkButton = screen.getByText("Copy Link") as HTMLButtonElement;
+  await userEvent.type(phoneNumber, "84234451");
+  expect(copyLinkButton).toBeDisabled();
+});
+
+test("The copy button is enabled if the phone number is valid", async () => {
+  render(<Home countryCodes={[]} />);
+  const phoneNumber = screen.getByAltText("phoneNum") as HTMLInputElement;
+  const copyLinkButton = screen.getByText("Copy Link") as HTMLButtonElement;
+  await userEvent.type(phoneNumber, "85285569095");
+  expect(copyLinkButton).toBeEnabled();
+});
+
+test("The copy button can be clicked if the phone number is valid", async () => {
+  render(<Home countryCodes={[]} />);
+  const phoneNumber = screen.getByAltText("phoneNum") as HTMLInputElement;
+  const copyLinkButton = screen.getByText("Copy Link") as HTMLButtonElement;
+  await userEvent.type(phoneNumber, "85285569095");
+  await userEvent.click(copyLinkButton);
+  expect(screen.getByText("Copied URL", { exact: false }));
+});
