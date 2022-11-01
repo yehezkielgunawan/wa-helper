@@ -10,7 +10,7 @@ import UnstyledLink from "../links/UnstyledLink";
 
 const FooterComponent = () => {
   return (
-    <footer className={clsxm("fixed bottom-0 w-full px-4 md:px-1")}>
+    <footer className={clsxm("mt-24 w-full px-4 md:px-1 lg:mt-16")}>
       <div
         className={clsxm(
           "flex flex-wrap items-center justify-center gap-2 sm:justify-between",
