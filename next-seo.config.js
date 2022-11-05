@@ -10,7 +10,7 @@ const defaultSEOConfig = {
     type: "website",
     images: [
       {
-        url: "https://og.yehezgun.com/api/base?description=Send%20Whastapp%20message%20without%20saving%20the%20contact%20first.&logo=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F408%2F408708.png%3Fw%3D740&siteName=wa.yehezgun.com&templateTitle=WhatsApp%20Helper&theme=dark",
+        url: "https://og-v2.yehezgun.com/api/og?title=Wa-Helper&desc=A%20web%20app%20to%20save%20your%20time%20to%20directly%20chat%20without%20saving%20the%20phone%20number.&imgUrl=https://cdn-icons-png.flaticon.com/512/733/733585.png?w=740&t=st=1667650978~exp=1667651578~hmac=0018014bd277113ec2ed856144f601742e5fe4d227412f3da634d52f1c4ab29f&siteName=wa.yehezgun.com",
         alt: "wa.yehezgun.com whatsapp-helper",
         width: 800,
         height: 600,
