@@ -3,6 +3,10 @@ import userEvent from "@testing-library/user-event";
 
 import "@testing-library/jest-dom";
 import Home from "@/pages/index";
+import axios from "axios";
+
+jest.mock("axios");
+window.alert = jest.fn();
 
 test("Render home page successfully", () => {
   render(<Home countryCodes={[]} />);
@@ -61,4 +65,19 @@ test("The copy button can be clicked if the phone number is valid", async () => 
   await userEvent.type(phoneNumber, "85285569095");
   await userEvent.click(copyLinkButton);
   expect(screen.getByText("Copied URL", { exact: false }));
+});
+
+test("should successfully perform the whole process", async () => {
+  const mockedAxios = axios as jest.Mocked<typeof axios>;
+  mockedAxios.post.mockResolvedValueOnce("success");
+
+  const user = userEvent.setup();
+  render(<Home countryCodes={[]} />);
+
+  const phoneInput = screen.getByAltText("phoneNum");
+  await user.type(phoneInput, "085900113324");
+
+  await user.click(screen.getByRole("button", { name: "Copy Link" }));
+  expect(axios.post).toHaveBeenCalled();
+  expect(screen.getByText(/copied url/i)).toBeInTheDocument();
 });
