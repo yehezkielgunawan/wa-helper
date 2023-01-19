@@ -16,7 +16,7 @@
     "typescript:ci": "tsc --noEmit"
   },
   "dependencies": {
-    "@fontsource/catamaran": "^4.5.7",
+    "@fontsource/catamaran": "^4.5.10",
     "@tailwindcss/forms": "^0.5.3",
     "axios": "^0.27.2",
     "clsx": "^1.2.1",
