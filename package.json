@@ -38,7 +38,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/node": "17.0.4",
     "@types/react": "^18.0.20",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.27.0",
     "eslint-config-next": "^13.2.3",
     "eslint-config-yehezgun": "^1.2.5",
