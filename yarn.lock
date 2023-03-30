@@ -5797,10 +5797,10 @@ synckit@^0.8.4:
     "@pkgr/utils" "^2.3.1"
     tslib "^2.4.0"
 
-tailwind-merge@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.8.1.tgz#0e56c8afbab2491f72e06381043ffec8b720ba04"
-  integrity sha512-+fflfPxvHFr81hTJpQ3MIwtqgvefHZFUHFiIHpVIRXvG/nX9+gu2P7JNlFu2bfDMJ+uHhi/pUgzaYacMoXv+Ww==
+tailwind-merge@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/tailwind-merge/-/tailwind-merge-1.11.0.tgz#8b50d3e7ad7fdd15514d57e8ac4084273aafbd1a"
+  integrity sha512-oG3/328Y7LrfPMfkgMNxoqEk1ZQdXBxdphf9FFrreo8q0EtVIHt3bQf2IyFhQuVt8puB57lCRBNbazGhYAyz9w==
 
 tailwindcss@^3.2.6:
   version "3.2.6"

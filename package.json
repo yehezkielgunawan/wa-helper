@@ -28,7 +28,7 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "tailwind-merge": "^1.8.1"
+    "tailwind-merge": "^1.11.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
