@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-
 import "@testing-library/jest-dom";
-import Home from "@/pages/index";
 import axios from "axios";
+
+import Home from "@/pages/index";
 
 jest.mock("axios");
 window.alert = jest.fn();

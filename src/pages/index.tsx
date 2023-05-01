@@ -125,9 +125,9 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
               <datalist id="countryCode">
                 {countryCodeList.map((code) => (
                   <option
-                    value={code.phone_code}
-                    key={`${code.phone_code}-${code.country_name}-${code.E164}`}
-                  >{`${code.phone_code} ${code.country_name}`}</option>
+                    value={code.dial_code}
+                    key={`${code.dial_code}-${code.code}-${code.name}`}
+                  >{`${code.dial_code} ${code.name}`}</option>
                 ))}
               </datalist>
 
