@@ -1,9 +1,5 @@
 name: release-please
 
-permissions:
-  contents: write
-  pull-request: write
-
 on:
   workflow_dispatch:
 
