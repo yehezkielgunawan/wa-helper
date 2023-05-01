@@ -1,0 +1,22 @@
+name: release-please
+
+permissions:
+  contents: write
+  pull-request: write
+
+on:
+  # Option 1: Manual Trigger from Github
+  workflow_dispatch:
+    # Option 2: Release on every Pull Request to branch main
+    # pull_request:
+    # branches:
+    # - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          package-name: release-please-action
