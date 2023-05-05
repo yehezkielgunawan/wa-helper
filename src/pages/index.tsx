@@ -102,7 +102,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
           </div>
         </section>
 
-        <section className="my-10 mx-auto max-w-lg space-y-2 px-4 md:px-0">
+        <section className="mx-auto my-10 max-w-lg space-y-2 px-4 md:px-0">
           <div className="space-y-2">
             <label
               htmlFor="phoneNum"
@@ -181,7 +181,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 
         <section
           className={clsxm(
-            "invisible my-4 mx-auto max-w-lg rounded p-3",
+            "invisible mx-auto my-4 max-w-lg rounded p-3",
             "bg-teal-200 dark:bg-teal-500",
             isCopied && copiedLink.length > 1 && "visible"
           )}
