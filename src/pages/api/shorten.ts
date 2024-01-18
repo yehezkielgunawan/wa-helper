@@ -24,6 +24,10 @@ type LinkContent = {
   tiny_url: string;
 };
 
+export const config = {
+  runtime: "experimental-edge",
+};
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<LinkFailureResponse | LinkSuccessResponse>
