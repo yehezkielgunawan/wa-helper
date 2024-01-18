@@ -14,10 +14,6 @@ import {
 } from "@/lib/fetcher/fetcher";
 import clsxm from "@/lib/helpers/clsxm";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 export async function getStaticProps() {
   const countryCodes = await getCountryCodes();
   return {
