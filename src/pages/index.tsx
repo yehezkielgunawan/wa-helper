@@ -1,17 +1,9 @@
-import { AxiosError } from "axios";
 import React, { useState } from "react";
-import { isMobile } from "react-device-detect";
 import { FaCheck, FaCopy } from "react-icons/fa";
 
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
-import {
-  CountryCodeProps,
-  getCountryCodes,
-  LinkContent,
-  LinkResponse,
-  shortenedURL,
-} from "@/lib/fetcher/fetcher";
+import { CountryCodeProps, getCountryCodes } from "@/lib/fetcher/fetcher";
 import clsxm from "@/lib/helpers/clsxm";
 
 export const runtime = "experimental-edge";
@@ -50,19 +42,16 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
     setCopiedLink("");
     setIsCopied(true);
 
-    await shortenedURL(
+    setCopiedLink(
       `https://wa.me/${countryCode + waNum}${
         message.length > 0 ? "?text=" + message : ""
-      }`,
-      "tinyurl.com"
-    )
-      .then((res: LinkContent) => {
-        setCopiedLink(res.tiny_url);
-        navigator.clipboard.writeText(res.tiny_url);
-      })
-      .catch((err: AxiosError<LinkResponse>) => {
-        alert(err.response?.data.errors?.map((errorMessage) => errorMessage));
-      });
+      }`
+    );
+    navigator.clipboard.writeText(
+      `https://wa.me/${countryCode + waNum}${
+        message.length > 0 ? "?text=" + message : ""
+      }`
+    );
 
     setTimeout(() => {
       setIsCopied(false);
@@ -71,14 +60,9 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 
   const openWAAPI = () => {
     return window.open(
-      isMobile
-        ? `https://wa.me/${countryCode + waNum}${
-            message.length > 0 ? "?text=" + message : ""
-          }`
-        : `https://web.whatsapp.com/send?phone=${countryCode + waNum}${
-            message.length > 0 ? "&text=" + message : ""
-          }`,
-      "_blank"
+      `https://wa.me/${countryCode + waNum}${
+        message.length > 0 ? "?text=" + message : ""
+      }`
     );
   };
 

@@ -1,5 +1,3 @@
-import axios, { AxiosResponse } from "axios";
-
 export type CountryCodeProps = {
   code: string;
   dial_code: string;
@@ -26,24 +24,15 @@ export type LinkInput = {
 };
 
 export const getCountryCodes = async () => {
-  return axios
-    .get(
-      "https://raw.githubusercontent.com/yehezkielgunawan/country-call-code/main/db.json"
-    )
-    .then((res: AxiosResponse<Array<CountryCodeProps>>) => {
-      // Afghanistan is duplicated in that API (index 0 and 1), so we just take the array from index one to the latest.
-      return res.data.slice(1);
-    });
-};
+  const response = await fetch(
+    "https://raw.githubusercontent.com/yehezkielgunawan/country-call-code/main/db.json"
+  );
 
-// Will send the request to the Next.js's API route.
-export const shortenedURL = async (url: string, domain: string) => {
-  return await axios
-    .post<LinkInput, AxiosResponse<LinkResponse>>("/api/shorten", {
-      url,
-      domain,
-    })
-    .then((res: AxiosResponse<LinkResponse>) => {
-      return res.data.data;
-    });
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const data: Array<CountryCodeProps> = await response.json();
+  // Afghanistan is duplicated in that API (index 0 and 1), so we just take the array from index one to the latest.
+  return data.slice(1);
 };
