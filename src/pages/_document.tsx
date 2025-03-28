@@ -1,12 +1,9 @@
-/* eslint-disable @next/next/no-title-in-document-head */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Document, {
   Html,
   Head,
   Main,
   NextScript,
-  DocumentContext,
+  type DocumentContext,
 } from "next/document";
 
 export default class MyDocument extends Document {
