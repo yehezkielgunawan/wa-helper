@@ -1,9 +1,9 @@
-import React from "react";
+import type React from "react";
 
 import clsxm from "@/lib/helpers/clsxm";
 
 import UnderlineLink from "./UnderlineLink";
-import { UnstyledLinkProps } from "./UnstyledLink";
+import type { UnstyledLinkProps } from "./UnstyledLink";
 
 type ArrowLinkProps<C extends React.ElementType> = {
 	as?: C;
@@ -32,7 +32,7 @@ export default function ArrowLink<C extends React.ElementType>({
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				className={clsxm(
-					"h-6 w-6 transition-transform duration-200 group-hover:-translate-x-1",
+					"group-hover:-translate-x-1 h-6 w-6 transition-transform duration-200",
 					direction === "right" && "rotate-180 group-hover:translate-x-1",
 				)}
 				fill="none"

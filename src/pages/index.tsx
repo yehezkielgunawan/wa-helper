@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import { FaCheck, FaCopy } from "react-icons/fa";
 
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
-import { CountryCodeProps, getCountryCodes } from "@/lib/fetcher/fetcher";
+import { type CountryCodeProps, getCountryCodes } from "@/lib/fetcher/fetcher";
 import clsxm from "@/lib/helpers/clsxm";
 
 export const runtime = "experimental-edge";
@@ -78,7 +79,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 					</h4>
 
 					<div className="space-y-0.5">
-						<p className="text-sm font-semibold underline">
+						<p className="font-semibold text-sm underline">
 							This site does not collect any personal information.
 						</p>
 

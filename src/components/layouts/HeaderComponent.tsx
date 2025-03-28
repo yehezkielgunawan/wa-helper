@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useTheme } from "next-themes";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FiSun, FiMoon } from "react-icons/fi";
 

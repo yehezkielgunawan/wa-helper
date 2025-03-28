@@ -54,7 +54,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 							"hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100",
 						],
 						variant === "light" && [
-							"text-dark bg-white ",
+							"bg-white text-dark ",
 							"border border-gray-300",
 							"hover:text-dark",
 							"active:bg-white/80 disabled:bg-gray-200",
@@ -75,7 +75,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 				{isLoading && (
 					<div
 						className={clsxm(
-							"absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
+							"-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2",
 							{
 								"text-white": ["primary", "dark"].includes(variant),
 								"text-black": ["light"].includes(variant),

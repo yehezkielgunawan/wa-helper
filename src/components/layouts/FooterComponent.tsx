@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import React from "react";
+
 import { GiPayMoney } from "react-icons/gi";
 import { SiKofi } from "react-icons/si";
 
