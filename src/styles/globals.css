@@ -1,6 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin '@tailwindcss/forms';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+	--font-primary: Catamaran, ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+	--color-primary-50: #eef7f1;
+	--color-primary-100: #d9eddf;
+	--color-primary-200: #b7dcc3;
+	--color-primary-300: #91caa3;
+	--color-primary-400: #6bb883;
+	--color-primary-500: #4da167;
+	--color-primary-600: #3d8052;
+	--color-primary-700: #2e613e;
+	--color-primary-800: #1f422a;
+	--color-primary-900: #0f1f14;
+
+	--color-daviesgrey-50: #ecedee;
+	--color-daviesgrey-100: #d9dadd;
+	--color-daviesgrey-200: #b6b8be;
+	--color-daviesgrey-300: #90949d;
+	--color-daviesgrey-400: #6e727c;
+	--color-daviesgrey-500: #4d5057;
+	--color-daviesgrey-600: #3e4146;
+	--color-daviesgrey-700: #2d2f33;
+	--color-daviesgrey-800: #1f2023;
+	--color-daviesgrey-900: #0e0f10;
+
+	--color-hookersgreen-50: #edf2f0;
+	--color-hookersgreen-100: #d8e3dd;
+	--color-hookersgreen-200: #b4cabf;
+	--color-hookersgreen-300: #8eaf9d;
+	--color-hookersgreen-400: #6a957e;
+	--color-hookersgreen-500: #4e6e5d;
+	--color-hookersgreen-600: #3f5a4c;
+	--color-hookersgreen-700: #2f4237;
+	--color-hookersgreen-800: #202d26;
+	--color-hookersgreen-900: #0f1512;
+
+	--color-pastelgreen-50: #ebf9ed;
+	--color-pastelgreen-100: #d8f3db;
+	--color-pastelgreen-200: #b1e7b7;
+	--color-pastelgreen-300: #8adb93;
+	--color-pastelgreen-400: #63cf6f;
+	--color-pastelgreen-500: #3bc14a;
+	--color-pastelgreen-600: #309c3c;
+	--color-pastelgreen-700: #24752d;
+	--color-pastelgreen-800: #184e1e;
+	--color-pastelgreen-900: #0c270f;
+
+	--color-lightgray-50: #fafafa;
+	--color-lightgray-100: #f5f5f5;
+	--color-lightgray-200: #ebebeb;
+	--color-lightgray-300: #e3e3e3;
+	--color-lightgray-400: #d9d9d9;
+	--color-lightgray-500: #cfcfcf;
+	--color-lightgray-600: #a6a6a6;
+	--color-lightgray-700: #7d7d7d;
+	--color-lightgray-800: #525252;
+	--color-lightgray-900: #292929;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+}
+
+@utility base-form {
+	@apply rounded-sm dark:bg-slate-600 dark:text-zinc-100;
+	@apply focus:border-pastelgreen-600 focus:ring-pastelgreen-600;
+	@apply dark:focus:border-pastelgreen-300 dark:focus:ring-pastelgreen-300;
+}
 
 @layer base {
 	/* inter var - latin */
@@ -55,13 +141,5 @@
 	input[type="number"]::-webkit-outer-spin-button {
 		-webkit-appearance: none;
 		margin: 0;
-	}
-}
-
-@layer utilities {
-	.base-form {
-		@apply rounded dark:bg-slate-600 dark:text-zinc-100;
-		@apply focus:border-pastelgreen-600 focus:ring-pastelgreen-600;
-		@apply dark:focus:border-pastelgreen-300 dark:focus:ring-pastelgreen-300;
 	}
 }

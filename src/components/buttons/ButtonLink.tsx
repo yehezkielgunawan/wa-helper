@@ -17,9 +17,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
 				ref={ref}
 				{...rest}
 				className={clsxm(
-					"inline-flex items-center rounded px-4 py-2 font-semibold",
-					"focus:outline-none focus-visible:ring focus-visible:ring-primary-500",
-					"shadow-sm",
+					"inline-flex items-center rounded-sm px-4 py-2 font-semibold",
+					"focus:outline-hidden focus-visible:ring-3 focus-visible:ring-primary-500",
+					"shadow-xs",
 					"transition-colors duration-75",
 					//#region  //*=========== Variants ===========
 					[
