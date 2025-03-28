@@ -45,12 +45,12 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 
 		setCopiedLink(
 			`https://wa.me/${countryCode + waNum}${
-				message.length > 0 ? "?text=" + message : ""
+				message.length > 0 ? `?text=${message}` : ""
 			}`,
 		);
 		navigator.clipboard.writeText(
 			`https://wa.me/${countryCode + waNum}${
-				message.length > 0 ? "?text=" + message : ""
+				message.length > 0 ? `?text=${message}` : ""
 			}`,
 		);
 
@@ -62,7 +62,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 	const openWAAPI = () => {
 		return window.open(
 			`https://wa.me/${countryCode + waNum}${
-				message.length > 0 ? "?text=" + message : ""
+				message.length > 0 ? `?text=${message}` : ""
 			}`,
 		);
 	};
@@ -149,7 +149,6 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 							className={clsxm("grow justify-center")}
 							disabled={waNum.length < 10}
 							onClick={() => openWAAPI()}
-							role="generateButton"
 						>
 							Generate
 						</Button>
@@ -158,7 +157,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 							variant="outline"
 							className="grow gap-2"
 							onClick={() => handleCopiedLink()}
-							isLoading={copiedLink.length < 1 && isCopied ? true : false}
+							isLoading={!!(copiedLink.length < 1 && isCopied )}
 							disabled={waNum.length < 10}
 						>
 							<FaCopy size="16" /> Copy Link
