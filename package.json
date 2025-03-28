@@ -11,8 +11,9 @@
     "release": "standard-version",
     "test": "jest --watch",
     "test:ci": "jest --ci --collect-coverage --verbose",
-    "format": "prettier --write src",
-    "format:ci": "prettier --check src",
+    "biome:format": "biome format --write src/",
+    "biome:lint": "biome lint --write src/",
+    "biome:lint:ci": "biome lint src/",
     "typescript:ci": "tsc --noEmit",
     "up-latest": "pnpm up -i -L"
   },
@@ -30,6 +31,7 @@
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@cloudflare/next-on-pages": "^1.8.5",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
