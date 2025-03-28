@@ -13,7 +13,8 @@
     "test:ci": "jest --ci --collect-coverage --verbose",
     "format": "prettier --write src",
     "format:ci": "prettier --check src",
-    "typescript:ci": "tsc --noEmit"
+    "typescript:ci": "tsc --noEmit",
+    "up-latest": "pnpm up -i -L"
   },
   "dependencies": {
     "@fontsource/catamaran": "^4.5.10",
