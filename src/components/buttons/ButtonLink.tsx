@@ -2,18 +2,12 @@ import React from "react";
 
 import clsxm from "@/lib/helpers/clsxm";
 
-import UnstyledLink, { UnstyledLinkProps } from "../links/UnstyledLink";
+import UnstyledLink, { type UnstyledLinkProps } from "../links/UnstyledLink";
 
-enum ButtonVariant {
-  "primary",
-  "outline",
-  "ghost",
-  "light",
-  "dark",
-}
+type ButtonVariant = "primary" | "outline" | "ghost" | "light" | "dark";
 
 type ButtonLinkProps = {
-  variant?: keyof typeof ButtonVariant;
+  variant?: ButtonVariant;
 } & UnstyledLinkProps;
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
