@@ -32,7 +32,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Run Biome
-        run: pnpm lint:ci
+        run: pnpm biome:lint:ci
 
       - name: Run TypeScript
         run: pnpm typescript:ci
