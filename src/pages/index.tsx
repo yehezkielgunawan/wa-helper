@@ -7,8 +7,6 @@ import Layout from "@/components/layouts/Layout";
 import { type CountryCodeProps, getCountryCodes } from "@/lib/fetcher/fetcher";
 import clsxm from "@/lib/helpers/clsxm";
 
-export const runtime = "experimental-edge";
-
 export async function getStaticProps() {
 	const countryCodes = await getCountryCodes();
 	return {
@@ -157,7 +155,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 							variant="outline"
 							className="grow gap-2"
 							onClick={() => handleCopiedLink()}
-							isLoading={!!(copiedLink.length < 1 && isCopied )}
+							isLoading={!!(copiedLink.length < 1 && isCopied)}
 							disabled={waNum.length < 10}
 						>
 							<FaCopy size="16" /> Copy Link
@@ -167,7 +165,7 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
 
 				<section
 					className={clsxm(
-						"invisible mx-auto my-4 max-w-lg rounded p-3",
+						"invisible mx-auto my-4 max-w-lg rounded-sm p-3",
 						"bg-teal-200 dark:bg-teal-500",
 						isCopied && copiedLink.length > 1 && "visible",
 					)}
