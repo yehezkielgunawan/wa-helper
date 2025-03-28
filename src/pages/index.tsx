@@ -174,7 +174,8 @@ const Home = ({ countryCodes }: { countryCodes: Array<CountryCodeProps> }) => {
         >
           <div className="inline-flex w-full items-center justify-between gap-2">
             <p className="text-xs">
-              Copied URL: <span className="font-bold italic">{copiedLink}</span>{" "}
+              Copied URL:{" "}
+              <span className="font-bold italic">{copiedLink}</span>{" "}
             </p>
 
             <FaCheck size={16} />
