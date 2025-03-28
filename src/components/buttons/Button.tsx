@@ -3,17 +3,11 @@ import { ImSpinner2 } from "react-icons/im";
 
 import clsxm from "@/lib/helpers/clsxm";
 
-enum ButtonVariant {
-  "primary",
-  "outline",
-  "ghost",
-  "light",
-  "dark",
-}
+type ButtonVariant = "primary" | "outline" | "ghost" | "light" | "dark";
 
 type ButtonProps = {
   isLoading?: boolean;
-  variant?: keyof typeof ButtonVariant;
+  variant?: ButtonVariant;
 } & React.ComponentPropsWithRef<"button">;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
