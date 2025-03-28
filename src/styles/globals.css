@@ -3,67 +3,65 @@
 @tailwind utilities;
 
 @layer base {
-  /* inter var - latin */
-  @font-face {
-    font-family: "Catamaran";
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: optional;
-    unicode-range:
-      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-      U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-      U+FEFF, U+FFFD;
-  }
-  .cursor-newtab {
-    cursor:
-      url("/newtab-cursor.png") 10 10,
-      pointer;
-  }
+	/* inter var - latin */
+	@font-face {
+		font-family: "Catamaran";
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: optional;
+		unicode-range:
+			U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+			U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+			U+FEFF, U+FFFD;
+	}
+	.cursor-newtab {
+		cursor: url("/newtab-cursor.png") 10 10, pointer;
+	}
 
-  /* #region  /**=========== Typography =========== */
-  h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
-  }
+	/* #region  /**=========== Typography =========== */
+	h1 {
+		@apply font-primary text-2xl font-bold md:text-4xl;
+	}
 
-  h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
-  }
+	h2 {
+		@apply font-primary text-xl font-bold md:text-3xl;
+	}
 
-  h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
-  }
+	h3 {
+		@apply font-primary text-lg font-bold md:text-2xl;
+	}
 
-  h4 {
-    @apply font-primary text-base font-bold md:text-lg;
-  }
+	h4 {
+		@apply font-primary text-base font-bold md:text-lg;
+	}
 
-  body {
-    @apply bg-lightgray-100 font-primary text-sm dark:bg-daviesgrey-700 md:text-base;
-  }
+	body {
+		@apply bg-lightgray-100 font-primary text-sm dark:bg-daviesgrey-700 md:text-base;
+	}
 
-  .layout-container {
-    max-width: 64rem;
-    @apply mx-auto max-w-4xl px-2 pt-20 md:px-1;
-  }
+	.layout-container {
+		max-width: 64rem;
+		@apply mx-auto max-w-4xl px-2 pt-20 md:px-1;
+	}
 
-  .link-underline {
-    @apply underline decoration-dotted underline-offset-2;
-    @apply rounded-lg p-1;
-    @apply hover:bg-pastelgreen-300 hover:no-underline dark:hover:bg-hookersgreen-500;
-    @apply transition duration-300 ease-out;
-  }
+	.link-underline {
+		@apply underline decoration-dotted underline-offset-2;
+		@apply rounded-lg p-1;
+		@apply hover:bg-pastelgreen-300 hover:no-underline dark:hover:bg-hookersgreen-500;
+		@apply transition duration-300 ease-out;
+	}
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
 }
 
 @layer utilities {
-  .base-form {
-    @apply rounded dark:bg-slate-600 dark:text-zinc-100;
-    @apply focus:border-pastelgreen-600 focus:ring-pastelgreen-600;
-    @apply dark:focus:border-pastelgreen-300 dark:focus:ring-pastelgreen-300;
-  }
+	.base-form {
+		@apply rounded dark:bg-slate-600 dark:text-zinc-100;
+		@apply focus:border-pastelgreen-600 focus:ring-pastelgreen-600;
+		@apply dark:focus:border-pastelgreen-300 dark:focus:ring-pastelgreen-300;
+	}
 }
