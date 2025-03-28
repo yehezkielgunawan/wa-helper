@@ -11,8 +11,9 @@
     "release": "standard-version",
     "test": "jest --watch",
     "test:ci": "jest --ci --collect-coverage --verbose",
-    "format": "prettier --write src",
-    "format:ci": "prettier --check src",
+    "biome:format": "biome format --write src/",
+    "biome:lint": "biome lint --write src/",
+    "biome:lint:ci": "biome lint src/",
     "typescript:ci": "tsc --noEmit",
     "up-latest": "pnpm up -i -L"
   },
@@ -23,14 +24,13 @@
     "next": "15.2.4",
     "next-seo": "^6.0.0",
     "next-themes": "^0.4.6",
-    "prettier": "^3.5.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.8.5",
+    "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -53,11 +53,12 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --max-warnings=0",
-      "prettier --write src/"
+      "biome format --write src/",
+      "biome lint --write src/"
     ],
     "*.{json,css,scss,md}": [
-      "prettier --write src/"
+      "biome format --write src/",
+      "biome lint --write src/"
     ]
   },
   "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",

@@ -23,14 +23,16 @@ jobs:
           node-version: 20
           cache: "pnpm"
 
+      - name: Setup Biome
+        uses: biomejs/setup-biome@v2
+        with:
+          version: latest
+
       - name: Install Deps (immutable)
         run: pnpm install --no-frozen-lockfile
 
-      - name: Run Prettier
-        run: pnpm format:ci
-
-      - name: Run ESLint
-        run: pnpm lint
+      - name: Run Biome
+        run: pnpm biome:lint:ci
 
       - name: Run TypeScript
         run: pnpm typescript:ci
