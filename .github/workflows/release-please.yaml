@@ -21,6 +21,7 @@ jobs:
       - uses: googleapis/release-please-action@v4
         with:
           release-type: node
-          package-name: release-please-action
+          package-name: your-actual-package-name
           bump-minor-pre-major: ${{ inputs.is_bump_minor }}
           bump-patch-for-minor-pre-major: ${{ inputs.is_bump_patch_for_minor_pre_major }}
+          versioning-strategy: auto
