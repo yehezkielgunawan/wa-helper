@@ -21,7 +21,12 @@ jobs:
       - uses: googleapis/release-please-action@v4
         with:
           release-type: node
-          package-name: your-actual-package-name
+          package-name: wa-helper  # Replace with your actual package name from package.json
           bump-minor-pre-major: ${{ inputs.is_bump_minor }}
           bump-patch-for-minor-pre-major: ${{ inputs.is_bump_patch_for_minor_pre_major }}
           versioning-strategy: auto
+          # Add these configurations to handle your situation
+          include-v-in-tag: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          default-branch: main
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"docs","section":"Documentation","hidden":false},{"type":"style","section":"Styling","hidden":false},{"type":"refactor","section":"Refactors","hidden":false},{"type":"perf","section":"Performance Improvements","hidden":false},{"type":"test","section":"Tests","hidden":false}]'
