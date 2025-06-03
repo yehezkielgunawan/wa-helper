@@ -14,7 +14,6 @@ import ButtonLink from "../buttons/ButtonLink";
 const HeaderComponent = () => {
 	const { theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState<boolean>(false);
-	const [isMac, setIsMac] = useState<boolean>(false);
 
 	const handleChangeTheme = useCallback(() => {
 		return setTheme(theme === "light" ? "dark" : "light");
@@ -30,11 +29,6 @@ const HeaderComponent = () => {
 
 	useEffect(() => {
 		setMounted(true);
-
-		// Detect if user is on Mac
-		const userAgent = navigator.userAgent;
-		const isMacOS = /Mac|iPod|iPhone|iPad/.test(userAgent);
-		setIsMac(isMacOS);
 
 		// Add global keyboard event listener
 		const handleGlobalKeyDown = (e: KeyboardEvent) => {
