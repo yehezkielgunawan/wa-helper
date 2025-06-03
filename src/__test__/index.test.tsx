@@ -93,14 +93,9 @@ describe("Home Page", () => {
 
 	test("Shows copy confirmation when copy button is clicked", async () => {
 		// Mock clipboard API properly
-		const mockClipboard = {
-			writeText: jest.fn().mockImplementation(() => Promise.resolve()),
-		};
-
-		// Use jest.spyOn instead of Object.assign
 		jest
 			.spyOn(navigator.clipboard, "writeText")
-			.mockImplementation(mockClipboard.writeText);
+			.mockImplementation(() => Promise.resolve());
 
 		render(<HomeContent countryCodes={[]} />);
 		const user = userEvent.setup();
@@ -122,14 +117,9 @@ describe("Home Page", () => {
 		const user = userEvent.setup();
 
 		// Mock clipboard API properly
-		const mockClipboard = {
-			writeText: jest.fn().mockImplementation(() => Promise.resolve()),
-		};
-
-		// Use jest.spyOn instead of Object.assign
 		jest
 			.spyOn(navigator.clipboard, "writeText")
-			.mockImplementation(mockClipboard.writeText);
+			.mockImplementation(() => Promise.resolve());
 
 		render(<HomeContent countryCodes={[]} />);
 
