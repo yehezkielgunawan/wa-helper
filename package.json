@@ -8,6 +8,8 @@
 		"biome:lint:ci": "biome lint src/",
 		"build": "next build",
 		"build:turbo": "next build --turbopack",
+		"sst:dev": "sst dev",
+		"sst:deploy": "sst deploy --stage production",
 		"dev": "next dev",
 		"prepare": "husky install",
 		"release": "standard-version",
