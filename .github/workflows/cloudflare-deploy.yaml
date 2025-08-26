@@ -26,7 +26,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build for Cloudflare
-        run: CLOUDFLARE_BUILD=true pnpm exec opennextjs-cloudflare build
+        run: pnpm cloudflare:deploy
         env:
           NEXT_PUBLIC_REPO: ${{ secrets.NEXT_PUBLIC_REPO }}
           NEXT_PUBLIC_REPO_ID: ${{ secrets.NEXT_PUBLIC_REPO_ID }}
