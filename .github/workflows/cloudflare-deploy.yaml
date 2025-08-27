@@ -26,7 +26,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build for Cloudflare
-        run: pnpm cloudflare:deploy
+        run: pnpm cloudflare:deploy:ci
         env:
           NEXT_PUBLIC_REPO: ${{ secrets.NEXT_PUBLIC_REPO }}
           NEXT_PUBLIC_REPO_ID: ${{ secrets.NEXT_PUBLIC_REPO_ID }}
