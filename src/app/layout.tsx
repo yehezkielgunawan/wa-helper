@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 		siteName: "wa.yehezgun.com",
 		images: [
 			{
-				url: "https://og-v2.yehezgun.com/api/og?title=Wa-Helper&desc=A%20web%20app%20to%20save%20your%20time%20to%20directly%20chat%20without%20saving%20the%20phone%20number.&imgUrl=https://cdn-icons-png.flaticon.com/512/733/733585.png?w=740&t=st=1667650978~exp=1667651578~hmac=0018014bd277113ec2ed856144f601742e5fe4d227412f3da634d52f1c4ab29f&siteName=wa.yehezgun.com",
+				url: "https://og-maker.yehez.workers.dev/api/og?title=WA+Helper&description=A+web+app+to+save+your+time+by+directly+chat+without+saving+the+phone+number+first.&imageUrl=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F733%2F733585.png%3Fw%3D740%26t%3Dst%3D1667650978%7Eexp%3D1667651578%7Ehmac%3D0018014bd277113ec2ed856144f601742e5fe4d227412f3da634d52f1c4ab29f",
 				width: 800,
 				height: 600,
 				alt: "wa.yehezgun.com whatsapp-helper",
